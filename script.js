@@ -1,23 +1,22 @@
-// Animazione cards al scroll
-const cards = document.querySelectorAll('.feature-card');
+// Animazione per le card e il form di contatto al caricamento della pagina
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.contact-form');
+  const featureCards = document.querySelectorAll('.feature-card');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.2 });
+  // Animazione delle feature card
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
 
-cards.forEach(card => observer.observe(card));
+  featureCards.forEach(card => observer.observe(card));
 
-// Header trasparente al scroll
-const header = document.querySelector('.header-section');
-window.addEventListener('scroll', () => {
-  if(window.scrollY > 50){
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
+  // Animazione del form di contatto
+  setTimeout(() => {
+    form.classList.add('visible');
+  }, 300);  // Ritardo per il form
 });
 

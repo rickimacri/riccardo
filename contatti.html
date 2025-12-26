@@ -5,49 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RM Graphics & Web – Contatti</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header class="header-section">
-    <div class="header-container">
-      <a href="index.html" class="logo"><img src="logo.png" alt="RM Solutions"></a>
-      <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="servizi.html">Servizi</a>
-        <a href="prezzi.html">Prezzi</a>
-        <a href="contatti.html">Contatti</a>
-      </nav>
-    </div>
-  </header>
+<header class="header-section">
+  <div class="header-container">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="RM" class="logo-animated">
+    </a>
 
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1>Contattaci</h1>
-      <p>Scrivici per qualsiasi informazione, preventivo o collaborazione.</p>
-    </div>
-  </section>
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="servizi.html">Servizi</a>
+      <a href="prezzi.html">Prezzi</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="features-section">
-    <div class="feature-card">
-      <h2>Modulo Contatti</h2>
-      <p>Nome, email e messaggio</p> 
-      <p>ti risponderemo al più presto.</p>
-    </div>
-    <div class="feature-card">
-      <h2>Email</h2>
-      <p>rickimacri@gmail.com</p>
-    </div>
-    <div class="feature-card">
-      <h2>Telefono</h2>
-      <p>+39 338 8050642</p>
-    </div>
-  </section>
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Contattaci</h1>
+    <p>Scrivimi per un preventivo o per qualsiasi informazione.</p>
 
-  <!-- FOOTER -->
-  <footer class="footer-section">
-    <p>© 2025 RM Graphics & Web. Tutti i diritti riservati.</p>
-  </footer>
+    <!-- Form Contatto con Animazione -->
+    <form class="contact-form" action="https://formspree.io/f/xqekkwlq" method="POST">
+      <div class="form-row">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="cognome" placeholder="Cognome" required>
+      </div>
+      <div class="form-row">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="telefono" placeholder="Numero di telefono">
+      </div>
+      <textarea name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
 
-  <script src="script.js"></script>
+      <input type="hidden" name="_subject" value="Nuovo contatto dal sito RM Graphics & Web">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" class="btn-primary">Invia messaggio</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-section">
+  <p>© 2025 RM Graphics & Web. Tutti i diritti riservati.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
